@@ -1,25 +1,20 @@
 server:
   port: 8003
 
-# spring:
-#   datasource:
-#     url: jdbc:h2:mem:testdb
-#     driverClassName: org.h2.Driver
-#     username: sa
-#     password: sa
-#   jpa:
-#     open-in-view: false
-#     show-sql: true
-#     hibernate:
-#       ddl-auto: update
-#     properties:
-#       hibernate:
-#         dialect: org.hibernate.dialect.H2Dialect
-#         format_sql: true
-#   h2:
-#     console:
-#       enabled: true
-#       path: /h2-console
+spring:
+  data:
+    mongodb:
+      database: dbseries
+      port: 27017
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+
+queue:
+  serie:
+    name: serieQueue
 
 eureka:
   instance:
